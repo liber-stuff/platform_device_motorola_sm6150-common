@@ -131,6 +131,11 @@ PRODUCT_PROPERTY_OVERRIDES += \
     dalvik.vm.heapstartsize=8m \
     dalvik.vm.heaptargetutilization=0.75
 
+# Dexopt
+PRODUCT_PROPERTY_OVERRIDES += \
+    pm.dexopt.first-boot=quicken \
+    pm.dexopt.bg-dexopt=everything
+
 # Display
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.hardware.vulkan=adreno \
