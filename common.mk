@@ -112,6 +112,7 @@ PRODUCT_PACKAGES += \
     android.hardware.bluetooth.audio@2.0-impl \
     audio.bluetooth.default \
     audio.primary.sm6150 \
+    audio.primary.default \
     audio.r_submix.default \
     audio.usb.default \
     libaudio-resampler \
