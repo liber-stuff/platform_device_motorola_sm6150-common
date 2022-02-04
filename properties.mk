@@ -193,6 +193,11 @@ PRODUCT_PRODUCT_PROPERTIES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.incremental.enable=1
 
+# LMKD
+PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
+   ro.config.low_ram=false \
+   ro.lmk.log_stats=true
+
 # Media
 PRODUCT_PROPERTY_OVERRIDES += \
     media.settings.xml=/vendor/etc/media_profiles_vendor.xml \
