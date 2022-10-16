@@ -136,6 +136,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
     pm.dexopt.first-boot=quicken \
     pm.dexopt.bg-dexopt=everything
 
+# Disable Skia tracing by default
+PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
+    debug.hwui.skia_atrace_enabled=false
+
 # Display
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.hardware.vulkan=adreno \
