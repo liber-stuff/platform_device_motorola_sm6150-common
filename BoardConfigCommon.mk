@@ -180,7 +180,9 @@ USE_DEVICE_SPECIFIC_GPS := true
 
 # HIDL
 DEVICE_MATRIX_FILE := $(COMMON_PATH)/compatibility_matrix.xml
-DEVICE_MANIFEST_FILE := $(COMMON_PATH)/manifest.xml
+DEVICE_MANIFEST_FILE :=  \
+    $(COMMON_PATH)/manifest.xml \
+    hardware/qcom-caf/sm8150/media/conf_files/msmnile/c2_manifest.xml
 
 # Init
 TARGET_INIT_VENDOR_LIB := //$(COMMON_PATH):libinit_sm6150
