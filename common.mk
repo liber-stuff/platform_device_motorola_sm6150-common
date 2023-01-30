@@ -287,6 +287,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/privapp-permissions-hotword.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/privapp-permissions-hotword.xml
 
+# HALs
+PRODUCT_USES_QCOM_HARDWARE := true
+PRODUCT_BOARD_PLATFORM := sm6150
+
 # IPACM
 PRODUCT_PACKAGES += \
     ipacm \
@@ -301,6 +305,12 @@ PRODUCT_COPY_FILES += \
 # IRQ
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/msm_irqbalance.conf:$(TARGET_COPY_OUT_VENDOR)/etc/msm_irqbalance.conf
+
+# Kernel
+TARGET_KERNEL_DIR ?= device/motorola/liber-kernel
+LOCAL_KERNEL := $(TARGET_KERNEL_DIR)/Image
+
+PRODUCT_COPY_FILES += $(LOCAL_KERNEL):kernel
 
 # Media
 PRODUCT_COPY_FILES += \
@@ -349,7 +359,7 @@ PRODUCT_PACKAGES += \
 
 # Power
 PRODUCT_PACKAGES += \
-    android.hardware.power-service.sm6150-libperfmgr
+    android.hardware.power-service.pixel-libperfmgr
 
 # QCOM
 PRODUCT_COPY_FILES += \
@@ -427,8 +437,8 @@ PRODUCT_MINIMIZE_JAVA_DEBUG_INFO := true
 PRODUCT_ART_TARGET_INCLUDE_DEBUG_BUILD := false
 
 PRODUCT_DEXPREOPT_SPEED_APPS += \
-    Settings \
-    SystemUI
+    StatixSettings \
+    StatixSystemUI
 
 # Telephony
 PRODUCT_PACKAGES += \
