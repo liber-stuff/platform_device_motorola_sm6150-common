@@ -326,11 +326,6 @@ PRODUCT_PACKAGES += \
     libchrome \
     libchrome.vendor
 
-# Moto hardware
-PRODUCT_PACKAGES += \
-    MotoActions \
-    MotoCommonOverlay
-
 # Net
 PRODUCT_PACKAGES += \
     netutils-wrapper-1.0
@@ -361,7 +356,8 @@ PRODUCT_PACKAGES += \
 
 # Power
 PRODUCT_PACKAGES += \
-    android.hardware.power-service.pixel-libperfmgr
+    android.hardware.power-service.pixel-libperfmgr \
+    android.hardware.power-V1-ndk
 
 # QCOM
 PRODUCT_COPY_FILES += \
